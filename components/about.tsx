@@ -67,33 +67,9 @@ export function About() {
     {
       title: "Web Developer Internship",
       date: "Oct 1 2024",
-      image: "/placeholder.svg",
+      image: "/Scrimba.jpg",
     },
-    {
-      title: "HTML/CSS Tutor at ACES",
-      date: "June 23 2024",
-      image: "/placeholder.svg",
-    },
-    {
-      title: "Web Development Internship at Prodigy InfoTech",
-      date: "February 14 2024",
-      image: "/placeholder.svg",
-    },
-    {
-      title: "Letter of Recommendation - Prodigy InfoTech",
-      date: "February 14 2024",
-      image: "/placeholder.svg",
-    },
-    {
-      title: "The Complete 2023 Web Development Bootcamp",
-      date: "July 7 2023",
-      image: "/placeholder.svg",
-    },
-    {
-      title: "FSU WebDev Competition",
-      date: "July 12 2023",
-      image: "/placeholder.svg",
-    },
+
   ];
 
   return (
@@ -102,7 +78,7 @@ export function About() {
       <div className="container mx-auto px-4 grid md:grid-cols-[300px_1fr] gap-8 mb-16">
         <div className="relative w-48 h-48 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-900 mx-auto md:mx-0">
           <Image
-            src="https://scontent.fbir4-1.fna.fbcdn.net/v/t39.30808-6/465859063_1142753110605289_3545862835938678317_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE5VA_Ajx0mzR8xkl63e83KyocsX9NcoPfKhyxf01yg99WZIUHrSs8wOE3g68JojG6qiBMdKKT9DPZxannk7IJx&_nc_ohc=fuillpUpb7IQ7kNvgHi8HtQ&_nc_oc=AdhAJz0XxN8Xlz6cRVCxr731shdp2WJHiwicLX0pkwrjzXS-BpqWw2Q1g2SoBac09pRukMezHV6INlEHY8480jfn&_nc_zt=23&_nc_ht=scontent.fbir4-1.fna&_nc_gid=AUY0xNLdCJnF0VRVyzFCRkr&oh=00_AYCwPIFbbyyvNIwkedUDLy4hBCHrNFA1-OZTPblvUdSSQw&oe=678386E5"
+            src="/avatar.webp"
             alt="Piyush Rajbanshi - Developer Illustration"
             fill
             className="object-cover"
@@ -120,7 +96,7 @@ export function About() {
             needs.
           </p>
           <Link href="/contact">
-            <Button className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white">
+            <Button className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white mt-4">
               Get in Touch <Mail className="ml-2 h-4 w-4" />
             </Button>
           </Link>

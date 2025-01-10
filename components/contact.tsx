@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
-import { Twitter, Linkedin, Github, AtSign, Copy, Send } from 'lucide-react'
+import { Instagram, Linkedin, Github, AtSign, Copy, Send } from 'lucide-react'
 import { useState } from "react"
 
 export function Contact() {
@@ -19,21 +19,21 @@ export function Contact() {
 
   const socialLinks = [
     {
-      icon: <Twitter className="h-5 w-5" />,
+      icon: <Github className="h-5 w-5" />,
+      label: "Github",
+      username: "jrPiyush",
+      href: "https://github.com/PiyuSX",
+    },
+    {
+      icon: <Instagram className="h-5 w-5" />,
       label: "X",
       username: "jrDevPiyush",
-      href: "#",
+      href: "https://www.instagram.com/jr.devpiyusx/",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
       username: "Piyush Rajbanshi",
-      href: "#",
-    },
-    {
-      icon: <Github className="h-5 w-5" />,
-      label: "Github",
-      username: "jrPiyush",
       href: "#",
     },
   ]
@@ -62,7 +62,7 @@ export function Contact() {
   ]
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText("contact@jrpiyush.dev")
+    await navigator.clipboard.writeText("contact@jrpiyush.me")
     setIsCopied(true)
     setTimeout(() => setIsCopied(false), 2000)
   }
@@ -75,7 +75,7 @@ export function Contact() {
           <div className="space-y-6">
             <div className="relative w-32 h-32 mx-auto mb-6">
               <Image
-                src="/placeholder.svg"
+                src="/avatar.webp"
                 alt="Profile"
                 fill
                 className="rounded-xl object-cover"
@@ -101,7 +101,7 @@ export function Contact() {
                   <AtSign className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                   <div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Mail</div>
-                    <div className="font-medium text-gray-900 dark:text-white">contact@jrpiyush.dev</div>
+                    <div className="font-medium text-gray-900 dark:text-white">contact@jrpiyush.me</div>
                   </div>
                 </div>
                 <Button
@@ -136,7 +136,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label className="text-sm text-gray-600 dark:text-gray-400">Name</label>
                     <Input
-                      placeholder="Eg: John Doe"
+                      placeholder="Eg: Johnny Sing"
                       className="bg-white dark:bg-black border-gray-300 dark:border-gray-700"
                     />
                   </div>

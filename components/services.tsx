@@ -20,7 +20,6 @@ export function Services() {
   const backendTechnologies = [
     { name: "Express.js", icon: "https://cdn.simpleicons.org/express" },
     { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
-    { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws" },
     { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
     { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
     { name: "Firebase", icon: "https://cdn.simpleicons.org/firebase" },
@@ -62,7 +61,7 @@ export function Services() {
               <div className="mb-6">
                 <div className="w-12 h-12 mb-4">
                   <Image
-                    src="/placeholder.svg"
+                    src="https://www.svgrepo.com/show/485018/web-page-browser-analysis-screen.svg"
                     alt="Web Development"
                     width={48}
                     height={48}
@@ -109,7 +108,7 @@ export function Services() {
               <div className="mb-6">
                 <div className="w-12 h-12 mb-4">
                   <Image
-                    src="/placeholder.svg"
+                    src="https://www.svgrepo.com/show/375397/compute-engine.svg"
                     alt="Backend Development"
                     width={48}
                     height={48}
