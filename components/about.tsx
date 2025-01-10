@@ -67,7 +67,7 @@ export function About() {
     {
       title: "Front End Development",
       date: "Oct 1 2024",
-      image: "https://postimg.cc/WhF6tq4c",
+      image: "https://i.postimg.cc/bNL6CQcr/scrimba.jpg",
     },
 
   ];
