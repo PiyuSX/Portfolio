@@ -1,153 +1,191 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Home, User, Wrench, FolderGit2 } from 'lucide-react'
-import { ThemeToggle } from "@/components/theme-toggle"
-import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Home, User, Wrench, FolderGit2, Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { usePathname } from "next/navigation";
 
 export function Header() {
-  const [typedText, setTypedText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [loopNum, setLoopNum] = useState(0)
-  const [typingSpeed, setTypingSpeed] = useState(150)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const textToType = "jrDevPiyush"
-  const cursor = "|"
+  const [typedText, setTypedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const textToType = "jrDevPiyush";
+  const cursor = "|";
 
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout
+    let timeoutId: NodeJS.Timeout;
 
     const handleTyping = () => {
       const currentText = textToType.substring(
         0,
         typedText.length + (isDeleting ? -1 : 1)
-      )
-      setTypedText(currentText)
+      );
+      setTypedText(currentText);
 
       if (!isDeleting && currentText === textToType) {
-        timeoutId = setTimeout(() => setIsDeleting(true), 1000)
+        timeoutId = setTimeout(() => setIsDeleting(true), 1000);
       } else if (isDeleting && currentText === "") {
-        setIsDeleting(false)
-        setLoopNum(loopNum + 1)
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
       }
 
-      setTypingSpeed(isDeleting ? 50 : 150)
-    }
+      setTypingSpeed(isDeleting ? 50 : 150);
+    };
 
-    timeoutId = setTimeout(handleTyping, typingSpeed)
+    timeoutId = setTimeout(handleTyping, typingSpeed);
 
-    return () => clearTimeout(timeoutId)
-  }, [typedText, isDeleting, typingSpeed, loopNum])
+    return () => clearTimeout(timeoutId);
+  }, [typedText, isDeleting, typingSpeed, loopNum]);
 
   const isActive = (href: string) => {
     return pathname === href
       ? "text-purple-600 dark:text-purple-400"
-      : "text-gray-600 dark:text-gray-400"
-  }
+      : "text-gray-600 dark:text-gray-400";
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-black backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90">
-      <div className="container max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
-        <div className="flex h-16 items-center justify-between">
-          <div className="w-32">
-            <Link
-              href="/"
-              className="text-xl font-bold text-purple-600 dark:text-purple-400"
-            >
-              {typedText}
-              <span className="animate-blink">{cursor}</span>
-            </Link>
-          </div>
+    <>
+      {/* Header */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-black backdrop-blur-sm transition-transform duration-300 ${
+          isMenuOpen ? "hidden" : ""
+        }`}
+      >
+        <div className="container max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
+          <div className="flex h-16 items-center justify-between">
+            <div className="w-32">
+              <Link
+                href="/"
+                className="text-xl font-bold text-purple-600 dark:text-purple-400"
+              >
+                {typedText}
+                <span className="animate-blink">{cursor}</span>
+              </Link>
+            </div>
 
-          <nav className="hidden md:flex flex-1 items-center justify-center gap-8 px-4">
-            <Link
-              href="/"
-              className={`flex items-center gap-2 ${isActive("/")}`}
-            >
-              <Home className="h-4 w-4" />
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`flex items-center gap-2 ${isActive("/about")}`}
-            >
-              <User className="h-4 w-4" />
-              About
-            </Link>
-            <Link
-              href="/services"
-              className={`flex items-center gap-2 ${isActive("/services")}`}
-            >
-              <Wrench className="h-4 w-4" />
-              Services
-            </Link>
-            <Link
-              href="/#projects"
-              className={`flex items-center gap-2 ${isActive("/#projects")}`}
-            >
-              <FolderGit2 className="h-4 w-4" />
-              Projects
-            </Link>
-          </nav>
+            <nav className="hidden md:flex flex-1 items-center justify-center gap-8 px-4">
+              <Link
+                href="/"
+                className={`flex items-center gap-2 ${isActive("/")}`}
+              >
+                <Home className="h-4 w-4" />
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className={`flex items-center gap-2 ${isActive("/about")}`}
+              >
+                <User className="h-4 w-4" />
+                About
+              </Link>
+              <Link
+                href="/services"
+                className={`flex items-center gap-2 ${isActive("/services")}`}
+              >
+                <Wrench className="h-4 w-4" />
+                Services
+              </Link>
+              <Link
+                href="/#projects"
+                className={`flex items-center gap-2 ${isActive("/#projects")}`}
+              >
+                <FolderGit2 className="h-4 w-4" />
+                Projects
+              </Link>
+            </nav>
 
-          <div className="flex justify-end items-center gap-4">
-            <ThemeToggle />
-            
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-purple-600 dark:text-purple-400"
-            >
-              <div className="w-6 h-1 bg-current mb-1"></div>
-              <div className="w-6 h-1 bg-current mb-1"></div>
-              <div className="w-6 h-1 bg-current"></div>
-            </button>
+            <div className="flex justify-end items-center gap-4">
+              <ThemeToggle />
 
-            <Link href="/contact">
-              <Button className="bg-purple-600 hover:bg-purple-700 dark:text-white dark:bg-purple-600 dark:hover:bg-purple-700">
-                Contact
-              </Button>
-            </Link>
+              {/* Hamburger Button */}
+              <button
+                onClick={handleMenuToggle}
+                className="md:hidden text-purple-600 dark:text-purple-400"
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
+      </header>
 
-        {isMenuOpen && (
-          <nav className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 p-4">
-            <Link
-              href="/"
-              className={`block mb-2 ${isActive("/")}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`block mb-2 ${isActive("/about")}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/services"
-              className={`block mb-2 ${isActive("/services")}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/#projects"
-              className={`block mb-2 ${isActive("/#projects")}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects
-            </Link>
-          </nav>
-        )}
+      {/* Background Overlay */}
+      <div
+        className={`fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-md transition-opacity ${
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={handleCloseMenu}
+      ></div>
+
+      {/* Sliding Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-white dark:bg-black w-[50vw] transform transition-transform ease-in-out duration-300 z-50 flex flex-col justify-between ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={handleCloseMenu}
+          className="absolute top-4 right-4 text-purple-600 dark:text-purple-400"
+        >
+          <X className="h-6 w-6" />
+        </button>
+        <nav className="flex flex-col items-center justify-center flex-1 gap-4">
+          <Link
+            href="/"
+            className={`block ${isActive("/")}`}
+            onClick={handleCloseMenu}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className={`block ${isActive("/about")}`}
+            onClick={handleCloseMenu}
+          >
+            About
+          </Link>
+          <Link
+            href="/services"
+            className={`block ${isActive("/services")}`}
+            onClick={handleCloseMenu}
+          >
+            Services
+          </Link>
+          <Link
+            href="/#projects"
+            className={`block ${isActive("/#projects")}`}
+            onClick={handleCloseMenu}
+          >
+            Projects
+          </Link>
+        </nav>
+        <div className="p-4">
+          <Link
+            href="/contact"
+            className="block bg-purple-600 text-white text-center py-2 rounded-md hover:bg-purple-700"
+            onClick={handleCloseMenu}
+          >
+            Contact
+          </Link>
+        </div>
       </div>
-    </header>
-  )
+    </>
+  );
 }
-
