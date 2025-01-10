@@ -146,33 +146,37 @@ export function Header() {
         >
           <X className="h-6 w-6" />
         </button>
-        <nav className="flex flex-col items-center justify-center flex-1 gap-4">
+        <nav className="flex flex-col items-center justify-center flex-1 gap-6">
           <Link
             href="/"
-            className={`block ${isActive("/")}`}
+            className={`flex items-center gap-4 ${isActive("/")}`}
             onClick={handleCloseMenu}
           >
+            <Home className="h-5 w-5" />
             Home
           </Link>
           <Link
             href="/about"
-            className={`block ${isActive("/about")}`}
+            className={`flex items-center gap-4 ${isActive("/about")}`}
             onClick={handleCloseMenu}
           >
+            <User className="h-5 w-5" />
             About
           </Link>
           <Link
             href="/services"
-            className={`block ${isActive("/services")}`}
+            className={`flex items-center gap-4 ${isActive("/services")}`}
             onClick={handleCloseMenu}
           >
+            <Wrench className="h-5 w-5" />
             Services
           </Link>
           <Link
             href="/#projects"
-            className={`block ${isActive("/#projects")}`}
+            className={`flex items-center gap-4 ${isActive("/#projects")}`}
             onClick={handleCloseMenu}
           >
+            <FolderGit2 className="h-5 w-5" />
             Projects
           </Link>
         </nav>
