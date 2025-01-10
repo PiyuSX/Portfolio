@@ -60,12 +60,12 @@ export function Header() {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-black backdrop-blur-sm transition-transform duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 border-b lg:mx-[100px]  border-gray-200 dark:border-gray-80 bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 dark:border-b-slate-800 backdrop-blur-sm transition-transform duration-300 ${
           isMenuOpen ? "hidden" : ""
         }`}
       >
         <div className="container max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16  items-center justify-between">
             <div className="w-32">
               <Link
                 href="/"
@@ -105,21 +105,24 @@ export function Header() {
                 <FolderGit2 className="h-4 w-4" />
                 Projects
               </Link>
-              <Link
-                href="/contact"
-                className={`flex items-center gap-2 ${isActive("/contact")}`}
-              >
-                Contact
-              </Link>
             </nav>
-
             <div className="flex justify-end items-center gap-4">
               <ThemeToggle />
+
+              <div className="p-4">
+            <Link
+            href="/contact"
+            className="hidden md:block bg-purple-600 text-white text-center py-2 px-8 rounded-md hover:bg-purple-700"
+            onClick={handleCloseMenu}
+            >
+            Contact
+            </Link>
+        </div>
 
               {/* Hamburger Button */}
               <button
                 onClick={handleMenuToggle}
-                className="md:hidden text-purple-600 dark:text-purple-400"
+                className="md:hidden ml-[-40px] text-purple-600 dark:text-purple-400"
               >
                 {isMenuOpen ? (
                   <X className="w-6 h-6" />
@@ -197,13 +200,6 @@ export function Header() {
             <FolderGit2 className="h-5 w-5" />
             Projects
           </Link>
-          <Link
-            href="/contact"
-            className={`flex items-center gap-4 ${isActive("/contact")}`}
-            onClick={handleCloseMenu}
-          >
-            Contact
-          </Link>
         </nav>
 
         {/* Contact Button */}
@@ -220,3 +216,4 @@ export function Header() {
     </>
   );
 }
+
