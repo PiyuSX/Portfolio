@@ -1,6 +1,6 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
-import { Stats } from '@/components/stats'
+// import { Stats } from '@/components/stats'
 import { Expertise } from '@/components/expertise'
 import { Projects } from '@/components/projects'
 import { Testimonials } from '@/components/testimonials'
@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <main className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16">
         <Hero />
-        <Stats />
-        <TrustedBy />
+        {/* <Stats /> */}
+        <TrustedBy /> 
         <Expertise />
         <Projects />
         <Testimonials />

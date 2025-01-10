@@ -69,8 +69,8 @@ export function Contact() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white py-16">
-      <div className="container mx-auto px-4 md:px-6 pt-8">
-        <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+      <div className="container mx-auto px-4 md:px-6 pt-8 max-w-6xl">
+        <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start max-w-5xl mx-auto">
           {/* Social Links Section */}
           <div className="space-y-6">
             <div className="relative w-32 h-32 mx-auto mb-6">
