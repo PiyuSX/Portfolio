@@ -65,9 +65,9 @@ export function About() {
   // Certificates Data
   const certificates = [
     {
-      title: "Web Developer Internship",
+      title: "Front End Development",
       date: "Oct 1 2024",
-      image: "/Scrimba.jpg",
+      image: "/scrimba.jpg",
     },
 
   ];
@@ -173,7 +173,7 @@ export function About() {
           {certificates.map((cert, index) => (
             <Card key={index} className="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800">
               <CardContent className="p-4">
-                <div className="aspect-video relative rounded-lg overflow-hidden mb-4">
+                <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
                   <Image
                     src={cert.image}
                     alt={cert.title}

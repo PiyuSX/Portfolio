@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Download, Twitter, Linkedin, Github, AtSign, Code2 } from "lucide-react"
+import { Download, Facebook, Instagram, Linkedin, Github, AtSign } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import CountUp from "react-countup"
 
@@ -11,11 +11,11 @@ export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
 
   const socialLinks = [
-    { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
+    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/jr.devpiyusx/", label: "Instagram" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/PiyuSX", label: "GitHub" },
+    { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/profile.php?id=100046118313054", label: "Facebook" },
     { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Github className="h-5 w-5" />, href: "#", label: "GitHub" },
     { icon: <AtSign className="h-5 w-5" />, href: "#", label: "Email" },
-    { icon: <Code2 className="h-5 w-5" />, href: "#", label: "Portfolio" },
   ]
 
   const stats = [
@@ -73,6 +73,7 @@ export function Hero() {
                 href={link.href}
                 className="p-3 rounded-lg transition-colors bg-white border border-gray-200 hover:border-purple-200 dark:bg-[#111] dark:border-gray-800 dark:hover:border-purple-900 text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400"
                 aria-label={link.label}
+                target="_blank"
               >
                 {link.icon}
               </a>

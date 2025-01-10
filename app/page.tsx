@@ -6,7 +6,7 @@ import { Projects } from '@/components/projects'
 import { Testimonials } from '@/components/testimonials'
 import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
-import { TrustedBy } from '@/components/trusted-by'
+// import { TrustedBy } from '@/components/trusted-by'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <main className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16">
         <Hero />
         {/* <Stats /> */}
-        <TrustedBy /> 
+        {/* <TrustedBy />  */}
         <Expertise />
         <Projects />
         <Testimonials />

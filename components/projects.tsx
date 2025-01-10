@@ -6,17 +6,17 @@ export function Projects() {
   const projects = [
     {
       title: "Portfolio - Nitish",
-      image: "/placeholder.svg",
+      image: "/nitishcodes.png",
       tags: ["React", "TailwindCSS", "TypeScript"],
     },
     {
       title: "3D Portfolio",
-      image: "/placeholder.svg",
+      image: "/threejs.png",
       tags: ["React", "Three.js", "TailwindCSS"],
     },
     {
       title: "Arnikans - Club Website",
-      image: "/placeholder.svg",
+      image: "/arnikans.png",
       tags: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
     },
   ]

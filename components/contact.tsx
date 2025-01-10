@@ -87,6 +87,7 @@ export function Contact() {
                 <a
                   key={index}
                   href={link.href}
+                  target="_blank"
                   className="flex items-center gap-3 p-3 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors"
                 >
                   {link.icon}
