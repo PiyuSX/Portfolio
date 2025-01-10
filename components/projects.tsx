@@ -10,21 +10,21 @@ export function Projects() {
       image: "/nitishcodes.png",
       tags: ["React", "TailwindCSS", "TypeScript"],
       githubLink: "https://github.com/your-repo",
-      visitLink: "nitish.codes",
+      visitLink: "https://www.nitish.codes/",
     },
     {
       title: "3D Portfolio",
       image: "/threejs.png",
       tags: ["React", "Three.js", "TailwindCSS"],
       githubLink: "https://github.com/your-repo",
-      visitLink: "piyux.xyz",
+      visitLink: "https://www.piyux.xyz/",
     },
     {
       title: "Arnikans - Club Website",
       image: "/arnikans.png",
       tags: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
       githubLink: "https://github.com/your-repo",
-      visitLink: "arnikans.tech",
+      visitLink: "https://www.arnikans.tech/",
     },
   ];
 
