@@ -136,16 +136,28 @@ export function Header() {
 
       {/* Sliding Menu */}
       <div
-        className={`fixed top-0 right-0 h-full bg-white dark:bg-black w-[50vw] transform transition-transform ease-in-out duration-300 z-50 flex flex-col justify-between ${
+        className={`fixed top-0 right-0 h-full bg-white dark:bg-zinc-950 w-[40vw] transform transition-transform ease-in-out duration-300 z-50 flex flex-col justify-between ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <button
-          onClick={handleCloseMenu}
-          className="absolute top-4 right-4 text-purple-600 dark:text-purple-400"
-        >
-          <X className="h-6 w-6" />
-        </button>
+        {/* Close Button */}
+        <div className="flex justify-end p-4">
+          <button
+            onClick={handleCloseMenu}
+            className="text-purple-600 dark:text-purple-400"
+          >
+            <X className="h-6 w-6" />
+          </button>
+        </div>
+
+        {/* Static Text */}
+        <div className="flex justify-center items-center ">
+          <span className="text-xl font-bold text-purple-600 dark:text-purple-400">
+            jrDevPiyush
+          </span>
+        </div>
+
+        {/* Navigation Links */}
         <nav className="flex flex-col items-center justify-center flex-1 gap-6">
           <Link
             href="/"
@@ -180,6 +192,8 @@ export function Header() {
             Projects
           </Link>
         </nav>
+
+        {/* Contact Button */}
         <div className="p-4">
           <Link
             href="/contact"
