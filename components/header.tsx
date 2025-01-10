@@ -105,6 +105,12 @@ export function Header() {
                 <FolderGit2 className="h-4 w-4" />
                 Projects
               </Link>
+              <Link
+                href="/contact"
+                className={`flex items-center gap-2 ${isActive("/contact")}`}
+              >
+                Contact
+              </Link>
             </nav>
 
             <div className="flex justify-end items-center gap-4">
@@ -190,6 +196,13 @@ export function Header() {
           >
             <FolderGit2 className="h-5 w-5" />
             Projects
+          </Link>
+          <Link
+            href="/contact"
+            className={`flex items-center gap-4 ${isActive("/contact")}`}
+            onClick={handleCloseMenu}
+          >
+            Contact
           </Link>
         </nav>
 
