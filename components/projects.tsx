@@ -9,7 +9,7 @@ export function Projects() {
       title: "Portfolio - Nitish",
       image: "/nitishcodes.png",
       tags: ["React", "TailwindCSS", "TypeScript"],
-      githubLink: "https://github.com/your-repo",
+      githubLink: "https://github.com/PiyuSX/Portfolio-Nitish",
       visitLink: "https://www.nitish.codes/",
     },
     {
@@ -23,7 +23,7 @@ export function Projects() {
       title: "Arnikans - Club Website",
       image: "/arnikans.png",
       tags: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
-      githubLink: "https://github.com/your-repo",
+      githubLink: "https://github.com/PiyuSX/Arnikans-Website",
       visitLink: "https://www.arnikans.tech/",
     },
   ];
