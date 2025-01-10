@@ -13,9 +13,16 @@ import {
 import { Card } from "@/components/ui/card"
 import { Instagram, Linkedin, Github, AtSign, Copy, Send } from 'lucide-react'
 import { useState } from "react"
+import emailjs from "emailjs-com"
 
 export function Contact() {
   const [isCopied, setIsCopied] = useState(false)
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
 
   const socialLinks = [
     {
@@ -65,6 +72,28 @@ export function Contact() {
     await navigator.clipboard.writeText("contact@jrpiyush.me")
     setIsCopied(true)
     setTimeout(() => setIsCopied(false), 2000)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const result = await emailjs.send(
+        "service_0u01pyp", // Service ID
+        "template_7pzqdkk", // Template ID
+        form,
+        "aeuh82MRqpDVYtHcA" // Public Key
+      )
+      alert("Message sent successfully!")
+      setForm({ name: "", email: "", subject: "", message: "" }) // Reset form
+    } catch (error) {
+      console.error("Error sending email:", error)
+      alert("Failed to send message. Please try again later.")
+    }
   }
 
   return (
@@ -132,11 +161,14 @@ export function Contact() {
             </div>
 
             <Card className="bg-gray-100 dark:bg-gray-900 border-gray-200 dark:border-gray-800">
-              <form className="p-6 space-y-4">
+              <form className="p-6 space-y-4" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm text-gray-600 dark:text-gray-400">Name</label>
                     <Input
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
                       placeholder="Eg: Johnny Sing"
                       className="bg-white dark:bg-black border-gray-300 dark:border-gray-700"
                     />
@@ -144,7 +176,10 @@ export function Contact() {
                   <div className="space-y-2">
                     <label className="text-sm text-gray-600 dark:text-gray-400">Email</label>
                     <Input
+                      name="email"
                       type="email"
+                      value={form.email}
+                      onChange={handleChange}
                       placeholder="Eg: contact@example.com"
                       className="bg-white dark:bg-black border-gray-300 dark:border-gray-700"
                     />
@@ -153,6 +188,9 @@ export function Contact() {
                 <div className="space-y-2">
                   <label className="text-sm text-gray-600 dark:text-gray-400">Subject</label>
                   <Input
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
                     placeholder="I am planning to..."
                     className="bg-white dark:bg-black border-gray-300 dark:border-gray-700"
                   />
@@ -160,6 +198,9 @@ export function Contact() {
                 <div className="space-y-2">
                   <label className="text-sm text-gray-600 dark:text-gray-400">Message</label>
                   <Textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
                     placeholder="I am glad to..."
                     className="bg-white dark:bg-black border-gray-300 dark:border-gray-700 min-h-[150px]"
                   />
@@ -168,7 +209,7 @@ export function Contact() {
                   <Button variant="ghost">
                     Cancel
                   </Button>
-                  <Button className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700">
+                  <Button className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700" type="submit">
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
@@ -198,4 +239,3 @@ export function Contact() {
     </div>
   )
 }
-
