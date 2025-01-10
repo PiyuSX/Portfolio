@@ -5,19 +5,19 @@ import { Badge } from "@/components/ui/badge"
 export function Projects() {
   const projects = [
     {
-      title: "TechFest Web - ACES",
+      title: "Portfolio - Nitish",
       image: "/placeholder.svg",
-      tags: ["Next.js", "React", "TailwindCSS"],
+      tags: ["React", "TailwindCSS", "TypeScript"],
     },
     {
-      title: "ACES Web - IDE",
+      title: "3D Portfolio",
       image: "/placeholder.svg",
-      tags: ["Next.js", "MongoDB", "Express.js"],
+      tags: ["React", "Three.js", "TailwindCSS"],
     },
     {
-      title: "LogiKit - Open Source Toolkit",
+      title: "Arnikans - Club Website",
       image: "/placeholder.svg",
-      tags: ["React.js", "TypeScript", "TailwindCSS"],
+      tags: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
     },
   ]
 
@@ -59,4 +59,6 @@ export function Projects() {
     </section>
   )
 }
+
+""
 
