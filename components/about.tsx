@@ -44,23 +44,23 @@ export function About() {
     },
   ];
 
-  // Testimonials Data
-  const testimonials = [
-    {
-      name: "Hemanta Bhandari",
-      role: "Freelance Associate",
-      image: "/placeholder.svg",
-      text: "I've had the pleasure of working with Tilak on a private project, and I can't say enough good things about him. His ability to take Figma designs and turn something special. It's like watching an art...",
-      rating: 5,
-    },
-    {
-      name: "Mustafa Can Güzük",
-      role: "Freelance Associate",
-      image: "/placeholder.svg",
-      text: "He is really a good person, he responds very quickly and he really helped me a lot, the projects he has done are very nice, especially the Bumblebee - AI Powered Chatbot project...",
-      rating: 5,
-    },
-  ];
+  // // Testimonials Data
+  // const testimonials = [
+  //   {
+  //     name: "Hemanta Bhandari",
+  //     role: "Freelance Associate",
+  //     image: "/placeholder.svg",
+  //     text: "I've had the pleasure of working with Tilak on a private project, and I can't say enough good things about him. His ability to take Figma designs and turn something special. It's like watching an art...",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Mustafa Can Güzük",
+  //     role: "Freelance Associate",
+  //     image: "/placeholder.svg",
+  //     text: "He is really a good person, he responds very quickly and he really helped me a lot, the projects he has done are very nice, especially the Bumblebee - AI Powered Chatbot project...",
+  //     rating: 5,
+  //   },
+  // ];
 
   // Certificates Data
   const certificates = [
