@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { GithubIcon, ArrowUpRight } from "lucide-react"
 
 type Project = {
   title: string
@@ -11,75 +12,50 @@ type Project = {
   image: string
   category: string
   technologies: string[]
+  githubLink: string
+  visitLink: string
 }
 
 const projects: Project[] = [
   {
-    title: "TechFest Web - ACES",
-    description: "Unleash Innovation at ACES",
-    image: "/placeholder.svg",
-    category: "Web",
-    technologies: ["Next.js", "Three.js", "TailwindCSS"],
+    title: "Portfolio - Nitish",
+    description: "A portfolio website for Nitish, a full-stack developer, showcasing his projects and skills.",
+    image: "/nitishcodes.png",
+    category: "Frontend",
+    technologies: ["React", "TailwindCSS", "TypeScript"],
+    githubLink: "https://github.com/PiyuSX/Portfolio-Nitish",
+    visitLink: "https://www.nitish.codes/",
   },
   {
-    title: "ACES Web - IDE",
-    description: "Transform Your Tech Journey with ACES",
-    image: "/placeholder.svg",
-    category: "Web",
-    technologies: ["Next.js", "TailwindCSS"],
+    title: "3D Portfolio",
+    description: "A portfolio website for Nitish, a full-stack developer, showcasing his projects and skills.",
+    image: "/threejs.png",
+    category: "3D Website",
+    technologies: ["React", "Three.js", "TailwindCSS"],
+    githubLink: "https://github.com/your-repo",
+    visitLink: "https://www.piyux.xyz/",
   },
   {
-    title: "LazyKit - Open Source Toolkit",
-    description: "Drop the Excess, Keep the Impact!",
-    image: "/placeholder.svg",
-    category: "Package/Lib",
-    technologies: ["Next.js", "Vite.js", "TailwindCSS", "Markdown"],
+    title: "Arnikans - Club Website",
+    description: "A website for Arnikans, a student club, showcasing their events and activities.",
+    image: "/arnikans.png",
+    category: "Full stack",
+    technologies: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
+    githubLink: "https://github.com/PiyuSX/Arnikans-Website",
+    visitLink: "https://www.arnikans.tech/",
   },
   {
-    title: "Javasports - E-commerce Platform",
-    description: "All new junior cricket bat range",
-    image: "/placeholder.svg",
-    category: "Web",
-    technologies: ["React.js", "TailwindCSS"],
-  },
-  {
-    title: "Bumblebee 2.0 - AI Powered Chatbot",
-    description: "Advanced conversational AI platform",
-    image: "/placeholder.svg",
-    category: "AI",
-    technologies: ["Express.js", "MongoDB", "React.js", "TailwindCSS"],
-  },
-  {
-    title: "The Umpire - Import Export Company",
-    description: "Global trade solutions",
-    image: "/placeholder.svg",
-    category: "Freelancing",
-    technologies: ["React.js", "TailwindCSS", "Next.js"],
-  },
-  {
-    title: "Travellian - Travel Across the Globe",
-    description: "Start your unforgettable journey with us",
-    image: "/placeholder.svg",
-    category: "Freelancing",
-    technologies: ["React.js", "TailwindCSS"],
-  },
-  {
-    title: "FSU - WebDev Competition",
-    description: "Web development competition platform",
-    image: "/placeholder.svg",
-    category: "Web",
-    technologies: ["Next.js", "TailwindCSS"],
-  },
-  {
-    title: "Stringify - Effortless Text Manipulation",
-    description: "Simple text manipulation tools",
-    image: "/placeholder.svg",
-    category: "Package/Lib",
-    technologies: ["React.js", "HTML", "CSS"],
+    title: "Arnikans - Domain Registration",
+    description: "A website that provides free domain to students",
+    image: "/getarnikans.png",
+    category: "Full stack",
+    technologies: ["React.js", "TypeScript", "TailwindCSS", "Superbase", "Node.js", "Express.js"],
+    githubLink: "https://github.com/PiyuSX/Arnikans-Website",
+    visitLink: "https://www.get.arnikans.tech/",
   },
 ]
 
-const categories = ["All", "AI", "Freelancing", "Other", "Package/Lib", "Web"]
+const categories = ["All", ...new Set(projects.map((project) => project.category))]
 
 export function ProjectsGrid() {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -122,7 +98,7 @@ export function ProjectsGrid() {
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:border-purple-500 dark:hover:border-purple-500"
+              className="group relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:border-purple-500 dark:hover:border-purple-500"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -132,11 +108,33 @@ export function ProjectsGrid() {
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <div className="p-6 border-t border-gray-200 dark:border-gray-800">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                  {project.title}
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   {project.description}
                 </p>
+                <div className="flex items-center gap-4 mb-4">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="text-gray-700 dark:text-gray-200 transition-colors hover:text-purple-500 dark:hover:text-purple-500"
+                  >
+                    <GithubIcon className="h-5 w-5" />
+                  </a>
+                  <a
+                    href={project.visitLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit"
+                    className="text-gray-700 dark:text-gray-200 transition-colors hover:text-purple-500 dark:hover:text-purple-500"
+                  >
+                    <ArrowUpRight className="h-5 w-5" />
+                  </a>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge
@@ -156,4 +154,3 @@ export function ProjectsGrid() {
     </section>
   )
 }
-

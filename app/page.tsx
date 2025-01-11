@@ -1,12 +1,16 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
-// import { Stats } from '@/components/stats'
 import { Expertise } from '@/components/expertise'
-import { Projects } from '@/components/projects'
 import { Testimonials } from '@/components/testimonials'
 import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 // import { TrustedBy } from '@/components/trusted-by'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar, Nepal',
+  description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Arniko, Biratnagar. Specializing in MERN stack, Next.js, and web development.',
+}
 
 export default function Home() {
   return (
@@ -14,10 +18,8 @@ export default function Home() {
       <Header />
       <main className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16">
         <Hero />
-        {/* <Stats /> */}
-        {/* <TrustedBy />  */}
+        {/* <TrustedBy /> */}
         <Expertise />
-        <Projects />
         <Testimonials />
         <CTA />
       </main>

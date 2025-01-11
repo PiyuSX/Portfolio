@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, User, Wrench, FolderGit2, Menu, X } from "lucide-react";
+import { Home, User, Wrench, FolderGit2, Menu, X } from 'lucide-react';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { usePathname } from "next/navigation";
 
@@ -99,8 +99,8 @@ export function Header() {
                 Services
               </Link>
               <Link
-                href="/#projects"
-                className={`flex items-center gap-2 ${isActive("/#projects")}`}
+                href="/projects"
+                className={`flex items-center gap-2 ${isActive("/projects")}`}
               >
                 <FolderGit2 className="h-4 w-4" />
                 Projects
@@ -193,8 +193,8 @@ export function Header() {
             Services
           </Link>
           <Link
-            href="/#projects"
-            className={`flex items-center gap-4 ${isActive("/#projects")}`}
+            href="/projects"
+            className={`flex items-center gap-4 ${isActive("/projects")}`}
             onClick={handleCloseMenu}
           >
             <FolderGit2 className="h-5 w-5" />
