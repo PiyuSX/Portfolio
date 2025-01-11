@@ -32,7 +32,6 @@ export function Hero() {
       { name: 'Redux', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" width={16} height={16} /> },
       { name: 'Go', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" width={16} height={16} /> },
       { name: 'Node.js', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width={16} height={16} /> },
-      { name: 'Express', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width={16} height={16} /> },
       { name: 'MongoDB', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width={16} height={16} /> },
       { name: 'Vite', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite" width={16} height={16} /> },
       { name: 'Vue.js', icon: <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" width={16} height={16} /> },    
@@ -109,13 +108,14 @@ export function Hero() {
             Piyush Rajbanshi <span className="wave">👋</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Full Stack Developer from Biratnagar, Nepal <span>🇳🇵</span>
+          Crafting Web Solutions with 1+ Years of Expertise 🔥
           </p>
           <div className="flex gap-3 mb-6">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
+                target="_blank"
                 className="p-3 rounded-lg transition-colors bg-white border border-gray-200 hover:border-purple-200 dark:bg-[#111] dark:border-gray-800 dark:hover:border-purple-900 text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400"
                 aria-label={link.label}
               >
@@ -134,10 +134,10 @@ export function Hero() {
               👋 Greetings! I'm Piyush Rajbanshi (jrDevPiyush)
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-gray-900 dark:text-white">
-              Full Stack Developer from Arniko, Biratnagar
+              Full Stack Developer from Nepal
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-400">
-              With over 1 year of experience, I specialize in building robust web applications using the MERN stack, Next.js, and modern web technologies. As a developer from Biratnagar, I bring a unique perspective to every project.
+            Curiosity-driven developer with 1+ years of expertise building robust web apps using the MERN stack and Next.js, paired with hands-on experience in Docker and cloud deployment on AWS.
             </p>
           </div>
           <div className="mb-8">

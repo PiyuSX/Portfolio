@@ -5,16 +5,16 @@ import { Star } from 'lucide-react'
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Abhee S.",
+      name: "Nitish R.",
       role: "Freelance Client",
-      image: "/placeholder.svg",
+      image: "/placeholder.jpg",
       text: "Excellent communication, quick turnaround, and outstanding results. I'm 100% satisfied with the service provided. Highly recommended!",
     },
     {
       name: "Pramanand C.",
       role: "Senior Developer",
-      image: "/placeholder.svg",
-      text: "Tilak has been an invaluable asset to our team. He consistently demonstrated proficiency in developing web applications from scratch to production.",
+      image: "/placeholder.jpg",
+      text: "Piyush has been an invaluable asset to our team. He consistently demonstrated proficiency in developing web applications from scratch to production.",
     },
   ]
 
