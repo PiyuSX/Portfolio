@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Sparkles } from 'lucide-react'
+import Link from 'next/link'
 
 export function CTA() {
   return (
@@ -10,6 +11,7 @@ export function CTA() {
         I'm here to make it happen. Open to freelance work, collaborations, or even full-time roles—let's 
         create something extraordinary together!
       </p>
+      <Link href="/contact">
       <Button 
         size="lg" 
         className="gap-2 bg-purple-600 dark:text-white hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700"
@@ -17,6 +19,7 @@ export function CTA() {
         <Sparkles className="h-5 w-5" />
         Let's Make Magic
       </Button>
+      </Link>
     </section>
   )
 }
