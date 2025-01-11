@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: 'Contact Piyush Rajbanshi',
+  title: 'Contact',
   description: 'Get in touch with Piyush Rajbanshi for web development projects, collaborations, or job opportunities.',
 }
 

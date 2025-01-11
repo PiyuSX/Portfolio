@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { ProjectsGrid } from "@/components/projects-grid"
 
 export const metadata: Metadata = {
-  title: 'Projects - Piyush Rajbanshi',
+  title: 'Projects',
   description: 'Explore my portfolio of web development projects, including full-stack applications, open-source contributions, and client work.',
 }
 

@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar, Nepal',
+  title: 'Piyush | A Full-Stack Developer',
   description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Arniko, Biratnagar. Specializing in MERN stack, Next.js, and web development.',
 }
 
