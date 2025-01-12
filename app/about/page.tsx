@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Piyush Rajbanshi | Full Stack Developer',
     description: 'Learn more about Piyush Rajbanshi, his experience, skills, and journey as a full-stack web developer.',
-    images: ['https://www.jrpiyush.me/about.png'], // Replace this with the actual URL of your "about.png" image
+    images: ['https://www.jrpiyush.me/profile.jpg'], // Replace this with the actual URL of your "about.png" image
   },
 };
 
