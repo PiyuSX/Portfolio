@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: 'https://www.jrpiyush.me/about',
     images: [
       {
-        url: 'https://www.jrpiyush.me/about.png', // Replace this with the actual URL of your "about.png" image
+        url: 'https://www.jrpiyush.me/profile.jpg', // Replace this with the actual URL of your "about.png" image
         width: 1200,
         height: 630,
         alt: 'About Piyush Rajbanshi',
