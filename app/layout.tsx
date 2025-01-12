@@ -22,16 +22,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.jrpiyush.me/',
+    url: 'https://www.jrpiyush.me/profile.jpg',
     siteName: 'Piyush Rajbanshi - Full Stack Developer',
     title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar',
-    description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Arniko, Biratnagar. Specializing in MERN stack and Next.js development.',
+    description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Biratnagar. Specializing in MERN stack and Next.js development.',
     images: [
       {
-        url: 'https://www.jrpiyush.me/site.png', // Replace with your actual image URL
-        width: 1200,
-        height: 630,
-        alt: 'Portfolio preview of Piyush Rajbanshi - Full Stack Developer',
+        url: '/profile.jpg',
+        width: 32,
+        height: 32,
+        alt: 'Piyush Rajbanshi Logo',
       },
     ],
   },
@@ -39,8 +39,20 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar',
     description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Arniko, Biratnagar. Specializing in MERN stack and Next.js development.',
-    images: ['https://www.jrpiyush.me/site.png'], // Use the same image URL
+    images: ['/profile.jpg'],
     creator: '@jrDevPiyush',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' }
+    ],
   },
   robots: {
     index: true,
@@ -53,7 +65,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
 }
 
 export default function RootLayout({
@@ -64,12 +75,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Favicons */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        {/* Canonical URL */}
         <link rel="canonical" href="https://www.jrpiyush.me/" />
       </head>
       <body className={inter.className}>
@@ -81,7 +86,6 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        {/* JSON-LD Schema */}
         <Script
           id="schema-script"
           type="application/ld+json"
@@ -93,6 +97,7 @@ export default function RootLayout({
               alternateName: "jrDevPiyush",
               description: "Full Stack Developer specializing in MERN stack and Next.js",
               url: "https://www.jrpiyush.me/",
+              image: "/favicon-32x32.png",
               sameAs: [
                 "https://twitter.com/jrDevPiyush",
                 "https://www.linkedin.com/in/piyush-rajbanshi/",
