@@ -22,15 +22,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.jrpiyush.me/profile.jpg',
+    url: 'https://www.jrpiyush.me/',
     siteName: 'Piyush Rajbanshi - Full Stack Developer',
     title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar',
     description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Biratnagar. Specializing in MERN stack and Next.js development.',
     images: [
       {
-        url: '/profile.jpg',
-        width: 32,
-        height: 32,
+        url: '/profile.jpg',  // Use profile.jpg for search engine preview
+        width: 1200,
+        height: 630,
         alt: 'Piyush Rajbanshi Logo',
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Piyush Rajbanshi - Full Stack Developer from Biratnagar',
     description: 'Piyush Rajbanshi (jrDevPiyush) is a skilled full-stack developer from Arniko, Biratnagar. Specializing in MERN stack and Next.js development.',
-    images: ['/profile.jpg'],
+    images: ['/favicon-32x32.png'],  // Use favicon as logo
     creator: '@jrDevPiyush',
   },
   icons: {
@@ -97,7 +97,7 @@ export default function RootLayout({
               alternateName: "jrDevPiyush",
               description: "Full Stack Developer specializing in MERN stack and Next.js",
               url: "https://www.jrpiyush.me/",
-              image: "/favicon-32x32.png",
+              image: "/favicon-32x32.png",  // Use favicon as the profile image
               sameAs: [
                 "https://twitter.com/jrDevPiyush",
                 "https://www.linkedin.com/in/piyush-rajbanshi/",
