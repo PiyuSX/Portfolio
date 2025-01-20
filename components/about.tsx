@@ -15,8 +15,8 @@ export function About() {
   // Work Experience Data
   const workExperience = [
     {
-      role: "Developer / Technical Team",
-      company: "Interact Club of Arniko College",
+      role: "FreeLancing",
+      company: "Upwork, Fiverr, Freelancer",
       period: "January 2025 - Present",
       status: "Ongoing",
     },
