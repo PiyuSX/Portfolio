@@ -20,12 +20,12 @@ export function About() {
       period: "January 2025 - Present",
       status: "Ongoing",
     },
-    {
-      role: "Web Development Internship",
-      company: "TechNova Solutions",
-      period: "April 2024 - May 2024",
-      duration: "(1 month)",
-    },
+    // {
+    //   role: "Web Development Internship",
+    //   company: "TechNova Solutions",
+    //   period: "April 2024 - May 2024",
+    //   duration: "(1 month)",
+    // },
   ];
 
   // Education Data

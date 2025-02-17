@@ -137,7 +137,7 @@ export function Hero() {
               Full Stack Developer from Nepal
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-400">
-            Curiosity-driven developer with 1+ years of expertise building robust web apps using the MERN stack and Next.js, paired with hands-on experience in Docker and cloud deployment on AWS.
+            Curiosity-driven developer with expertise in React and beginner-level experience in Express, Node.js, and MongoDB. Currently exploring backend development to build robust web apps using the MERN stack.
             </p>
           </div>
           <div className="mb-8">

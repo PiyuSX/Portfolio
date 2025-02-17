@@ -69,7 +69,7 @@ export function Contact() {
   ]
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText("contact@jrpiyush.me")
+    await navigator.clipboard.writeText("iam@jrpiyush.me")
     setIsCopied(true)
     setTimeout(() => setIsCopied(false), 2000)
   }
@@ -131,7 +131,7 @@ export function Contact() {
                   <AtSign className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                   <div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Mail</div>
-                    <div className="font-medium text-gray-900 dark:text-white">contact@jrpiyush.me</div>
+                    <div className="font-medium text-gray-900 dark:text-white">iam@jrpiyush.me</div>
                   </div>
                 </div>
                 <Button

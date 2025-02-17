@@ -2,21 +2,21 @@ import React from 'react';
 
 export function Expertise() {
   const technologies = [
-    { icon: "https://cdn.simpleicons.org/nextdotjs", name: "Next.js", color: "000000" },
+    // { icon: "https://cdn.simpleicons.org/nextdotjs", name: "Next.js", color: "000000" },
     { icon: "https://cdn.simpleicons.org/mongodb", name: "MongoDB", color: "47A248" },
     { icon: "https://cdn.simpleicons.org/express", name: "Express.js", color: "000000" },
     { icon: "https://cdn.simpleicons.org/react", name: "React.js", color: "61DAFB" },
     { icon: "https://cdn.simpleicons.org/nodedotjs", name: "Node.js", color: "339933" },
-    { icon: "https://cdn.simpleicons.org/reactquery", name: "React Query", color: "FF4154" },
+    // { icon: "https://cdn.simpleicons.org/reactquery", name: "React Query", color: "FF4154" },
     { icon: "https://cdn.simpleicons.org/npm", name: "npm", color: "CB3837" },
     { icon: "https://cdn.simpleicons.org/tailwindcss", name: "TailwindCSS", color: "06B6D4" },
     { icon: "https://cdn.simpleicons.org/javascript", name: "JavaScript", color: "F7DF1E" },
-    { icon: "https://cdn.simpleicons.org/typescript", name: "TypeScript", color: "3178C6" },
-    { icon: "https://cdn.simpleicons.org/firebase", name: "Firebase", color: "FFCA28" },
-    { icon: "https://cdn.simpleicons.org/flask", name: "Flask", color: "000000" },
-    { icon: "https://cdn.simpleicons.org/python", name: "Python", color: "3776AB" },
-    { icon: "https://cdn.simpleicons.org/docker", name: "Docker", color: "2496ED" },
-    { icon: "https://cdn.simpleicons.org/redux", name: "Redux", color: "764ABC" },
+    // { icon: "https://cdn.simpleicons.org/typescript", name: "TypeScript", color: "3178C6" },
+    // { icon: "https://cdn.simpleicons.org/firebase", name: "Firebase", color: "FFCA28" },
+    // { icon: "https://cdn.simpleicons.org/flask", name: "Flask", color: "000000" },
+    // { icon: "https://cdn.simpleicons.org/python", name: "Python", color: "3776AB" },
+    // { icon: "https://cdn.simpleicons.org/docker", name: "Docker", color: "2496ED" },
+    // { icon: "https://cdn.simpleicons.org/redux", name: "Redux", color: "764ABC" },
   ];
 
   return (
