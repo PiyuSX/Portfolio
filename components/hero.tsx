@@ -134,7 +134,7 @@ export function Hero() {
               👋 Greetings! I'm Piyush Rajbanshi (jrDevPiyush)
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-gray-900 dark:text-white">
-              Full Stack Developer from Nepal
+              React Developer from Nepal
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-400">
             Curiosity-driven developer with expertise in React and beginner-level experience in Express, Node.js, and MongoDB. Currently exploring backend development to build robust web apps using the MERN stack.
