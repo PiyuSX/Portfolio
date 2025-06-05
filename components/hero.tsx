@@ -97,7 +97,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full">
               <div className="absolute inset-0 rounded-full border-2 border-gray-200 dark:border-gray-800"></div>
               <Image
-                src="https://scontent.fktm18-1.fna.fbcdn.net/v/t39.30808-6/476481497_1202571854623414_1605725249640972735_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=EbIAEln4TSIQ7kNvgGlievJ&_nc_oc=AdlLrh3GpBJGu8vLXZissN2X-8r1Qq4cTYUCyV16CDzCE50nFMoOGbKGt0OFDRN5h2k&_nc_zt=23&_nc_ht=scontent.fktm18-1.fna&_nc_gid=ns3MiO-hhxdfxF-Xuf5hpA&oh=00_AYEdV341rgNaPTY0Oag-1voMEZHAZEEZslajXse4UBsodg&oe=67E42B55"
+                src="/profile.jpg"
                 alt="Piyush Rajbanshi"
                 fill
                 className="rounded-full object-cover"
